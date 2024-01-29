@@ -1,0 +1,51 @@
+Bundesamt für Meteorologie und Klimatologie, MeteoSchweiz
+Operation Center 1
+Postfach 257
+8058 Zürich-Flughafen
+
+stn yyyyMMddHHmm
+
+stn Stationskürzel
+y   Jahr
+M   Monat
+d   Tag
+H   Stunde
+m   Minute
+
+Zeitangaben in UTC: 00:40 UTC = 02:40 Sommerzeit
+                              = 01:40 Winterzeit
+
+Zeitbezug bei Stundenwerten, sofern in der Parameterbeschreibung nicht anders vermerkt: HH  = (HH-1):01 - HH:00
+Beispiel: 13 = beinhaltet Messperiode von 12:01 bis 13:00 
+
+Fehlende Messwerte sind gekenntzeichnet mit '-'
+
+Qualitätsinformationen: Die Legende zu den Qualitätsinformationen ist zu finden unter: https://gate.meteoswiss.ch/idaweb/text/datenqualitaet_legende_de.pdf
+
+ 
+
+
+
+
+Stationen
+---------
+stn       Name                                 Parameter        Datenquelle                                        Länge/Breite             Koordinaten [km] Höhe ü. M. [m]
+LUZ       Luzern                               pva200s0         MeteoSchweiz                                       8°18'/47°02'             665543/209849    454
+LUZ       Luzern                               gre000z0         MeteoSchweiz                                       8°18'/47°02'             665543/209849    454
+LUZ       Luzern                               oli000z0         MeteoSchweiz                                       8°18'/47°02'             665543/209849    454
+LUZ       Luzern                               tre200s0         MeteoSchweiz                                       8°18'/47°02'             665543/209849    454
+LUZ       Luzern                               pvawats0         MeteoSchweiz                                       8°18'/47°02'             665543/209849    454
+LUZ       Luzern                               fkl010z0         MeteoSchweiz                                       8°18'/47°02'             665543/209849    454
+LUZ       Luzern                               dkl010z0         MeteoSchweiz                                       8°18'/47°02'             665543/209849    454
+
+Parameter
+---------
+          Einheit                              Beschreibung
+pva200s0  hPa                                  Dampfdruck 2 m über Boden; Momentanwert
+gre000z0  W/m²                                 Globalstrahlung; Zehnminutenmittel
+oli000z0  W/m²                                 Langwellige Einstrahlung; Zehnminutenmittel
+tre200s0  °C                                   Lufttemperatur 2 m über Boden; Momentanwert
+pvawats0  hPa                                  Sättigungsdampfdruck über Wasser; Momentanwert
+fkl010z0  m/s                                  Windgeschwindigkeit skalar; Zehnminutenmittel
+dkl010z0  °                                    Windrichtung; Zehnminutenmittel
+

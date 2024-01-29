@@ -1,0 +1,54 @@
+{
+  "comment" : "",
+  "version" : {
+    "file" : "1.0.0",
+    "ruskin" : "2.15.1"
+  },
+  "export" : {
+    "exporttime" : "2022-09-13 14:18:11.300",
+    "starttime" : "2022-04-04 06:00:00.000",
+    "endtime" : "2022-09-13 14:16:00.000"
+  },
+  "instrument" : {
+    "serial" : 200565,
+    "model" : "RBRsolo³",
+    "fwtype" : 105,
+    "fwversion" : 1.053
+  },
+  "dataheader" : [ {
+    "index" : 1,
+    "name" : "Time",
+    "format" : "yyyy-MM-dd HH:mm:ss.SSS"
+  }, {
+    "index" : 1,
+    "name" : "Temperature",
+    "units" : "Degrees_C",
+    "calibration" : {
+      "time" : "2019-03-16 12:34:47.000",
+      "C0" : 0.0035172438,
+      "C1" : -2.5312384E-4,
+      "C2" : 2.5017414E-6,
+      "C3" : -8.72202E-8
+    }
+  } ],
+  "schedule" : {
+    "loggertime" : "2022-09-13 16:16:15.888",
+    "starttime" : "2022-04-04 08:00:00.000",
+    "endtime" : "2099-12-31 01:00:00.000"
+  },
+  "sampling" : {
+    "mode" : "CONTINUOUS",
+    "period" : "30000"
+  },
+  "parameters" : {
+    "atmpressure" : 10.132501,
+    "density" : 1.0260206,
+    "altitude" : 0.0,
+    "temperature" : 15.0,
+    "pressure" : 10.1325,
+    "conductivity" : 42.914,
+    "salinity" : 35.0,
+    "spec_cond_coeff" : 0.0,
+    "offsetfromutc" : 0.0
+  }
+}
