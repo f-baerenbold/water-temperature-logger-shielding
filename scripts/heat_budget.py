@@ -21,7 +21,7 @@ period = 'all'
 add_10_degrees = True
 
 # Read in solar radiation data from MeteoSwiss station in Lucerne
-meteo = pd.read_csv('./data/meteo/order_105735_data.txt', header=0, skiprows=2, delimiter=';')
+meteo = pd.read_csv('./data/meteo/MeteoSwiss_LUZ_data.txt', header=0, skiprows=2, delimiter=';')
 meteo['Time'] = pd.to_datetime(meteo['time'], format='%Y%m%d%H%M')
 meteo['Timestamp'] = meteo['Time'].apply(lambda x: datetime.timestamp(x))
 
