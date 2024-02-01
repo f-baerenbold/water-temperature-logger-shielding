@@ -21,7 +21,7 @@ register_matplotlib_converters()
 period = 'all'
 
 # Read in solar radiation data from MeteoSwiss station in Lucerne
-meteo = pd.read_csv('./data/meteo/order_105735_data.txt', header=0, skiprows=2, delimiter=';', na_values='-',usecols = [1,3])
+meteo = pd.read_csv('./data/meteo/order_105735_data.txt', header=0, skiprows=2, delimiter=';', na_values='-',usecols = ['time','gre000z0'])
 meteo['time'] = pd.to_datetime(meteo['time'], format='%Y%m%d%H%M')
 meteo['timestamp'] = meteo['time'].apply(lambda x: datetime.timestamp(x))
 

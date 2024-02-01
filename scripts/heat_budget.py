@@ -21,7 +21,7 @@ period = 'all'
 add_10_degrees = True
 
 # Read in solar radiation data from MeteoSwiss station in Lucerne
-meteo = pd.read_csv('./data/meteo/order_105735_data.txt', header=0, skiprows=2, delimiter=';',usecols = [1,2,3,4,5,6,7,8])
+meteo = pd.read_csv('./data/meteo/order_105735_data.txt', header=0, skiprows=2, delimiter=';')
 meteo['Time'] = pd.to_datetime(meteo['time'], format='%Y%m%d%H%M')
 meteo['Timestamp'] = meteo['Time'].apply(lambda x: datetime.timestamp(x))
 
@@ -37,14 +37,14 @@ else:
 
 # Hobo sensor with shield
 hobo_shield_file = [x for x in files if "hobo_pond_shield" in x]
-hobo_shield = pd.read_csv(data_folder + hobo_shield_file[0], header=0, skiprows=0, delimiter=',',usecols = [0,1,2])
+hobo_shield = pd.read_csv(data_folder + hobo_shield_file[0], header=0, skiprows=0, delimiter=',')
 hobo_shield['Time'] = pd.to_datetime(hobo_shield['Date-Time (UTC Standard Time)'], format='%m/%d/%Y %H:%M:%S')
 hobo_shield['Timestamp'] = hobo_shield['Time'].apply(lambda x: datetime.timestamp(x))
 hobo_shield['Ch: 1 - Temperature Avg : Avg (°C )'] = hobo_shield['Ch: 1 - Temperature Avg : Avg (°C )'] + 0.005 # Calibration of Fall 2022
 
 # Hobo sensor without shield
 hobo_noshield_file = [x for x in files if "hobo_pond_noshield" in x]
-hobo_noshield = pd.read_csv(data_folder + hobo_noshield_file[0], header=0, skiprows=0, delimiter=',',usecols = [0,1,2])
+hobo_noshield = pd.read_csv(data_folder + hobo_noshield_file[0], header=0, skiprows=0, delimiter=',')
 hobo_noshield['Time'] = pd.to_datetime(hobo_noshield['Date-Time (UTC Standard Time)'], format='%m/%d/%Y %H:%M:%S')
 hobo_noshield['Timestamp'] = hobo_noshield['Time'].apply(lambda x: datetime.timestamp(x))
 hobo_noshield['Ch: 1 - Temperature Avg : Avg (°C )'] = hobo_noshield['Ch: 1 - Temperature Avg : Avg (°C )'] + 0.035 # Calibration of Fall 2022
